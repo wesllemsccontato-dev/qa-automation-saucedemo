@@ -19,11 +19,20 @@ https://www.saucedemo.com/
 
 ## Cenários Automatizados
 
-- CT-001 – Login válido
-- CT-018 – Sensibilidade da senha
-- CT-040 – Acesso sem autenticação
-- CT-042 – Botão voltar após logout
-- CT-046 – URL direta
+Autenticação
+✅ CT-001 — Login válido
+✅ CT-002 — Login inválido
+✅ CT-003 — Usuário inválido
+✅ CT-013 — Campos obrigatórios vazios
+✅ CT-018 — Sensibilidade da senha
+✅ CT-056 — Login pressionando ENTER
+Controle de Sessão
+✅ CT-040 — Acesso sem autenticação
+✅ CT-042 — Botão voltar após logout
+✅ CT-046 — URL direta após logout
+✅ CT-115 — Atualizar página logado
+Segurança
+✅ CT-053 — Scripts maliciosos (XSS)
 
 ## Tecnologias
 
@@ -32,6 +41,18 @@ https://www.saucedemo.com/
 - Pytest
 - Git
 - GitHub
+
+
+
+## Estatísticas do Projeto
+
+Total de testes automatizados: 11
+Testes aprovados: 11
+Taxa de sucesso: 100%
+Framework: Pytest
+Automação: Selenium WebDriver
+Linguagem: Python
+Padrão de projeto: Page Object Model (POM)
 
 ## Autor
 
