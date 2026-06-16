@@ -20,21 +20,21 @@ https://www.saucedemo.com/
 ## Cenários Automatizados
 
 Autenticação
-CT-001 - Login válido
-CT-002 - Login inválido
-CT-003 - Usuário inválido
-CT-013 - Campos obrigatórios vazios
-CT-018 - Sensibilidade da senha (case sensitive)
-CT-056 - Login pressionando ENTER
+-  CT-001 - Login válido
+- CT-002 - Login inválido
+- CT-003 - Usuário inválido
+- CT-013 - Campos obrigatórios vazios
+- CT-018 - Sensibilidade da senha (case sensitive)
+- CT-056 - Login pressionando ENTER
 
 Controle de Sessão
-CT-040 - Acesso sem autenticação
-CT-042 - Botão voltar após logout
-CT-046 - URL direta após logout
-CT-115 - Atualizar página logado
+- CT-040 - Acesso sem autenticação
+- T-042 - Botão voltar após logout
+- CT-046 - URL direta após logout
+- CT-115 - Atualizar página logado
 
 Segurança
-CT-053 - Scripts maliciosos (XSS)
+- CT-053 - Scripts maliciosos (XSS)
 
 ## Tecnologias
 
