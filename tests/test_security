@@ -1,0 +1,37 @@
+from pages.login_page import LoginPage
+from data.test_data import PAYLOADS1, PAYLOADS2, PAYLOADS3, PAY_PASSWORD
+
+
+
+
+
+# CT-040 - Acesso Sem Autenticacao
+def test_CT040_acesso_sem_autenticacao(driver):
+    
+    page = LoginPage(driver)
+    
+    page.open_inventory()
+
+    assert (
+        page.get_error_message()
+        == "Epic sadface: You can only access '/inventory.html' when you are logged in."
+    )
+    
+    assert driver.current_url == "https://www.saucedemo.com/"
+    
+
+# CT-053 - Scripts maliciosos
+def test_CT053_scripts_maliciosos(driver):
+    
+    page = LoginPage(driver)
+
+    page.open()
+    
+    page.login_XSS(
+        PAYLOADS1,
+        PAY_PASSWORD
+    )
+    assert (
+        page.get_error_message()
+        == "Epic sadface: Username and password do not match any user in this service"
+    )

@@ -6,12 +6,12 @@ Projeto de automação de testes utilizando Python, Selenium WebDriver e Pytest.
 
 Demonstrar conhecimentos em:
 
-- Automação de testes Web
-- Selenium WebDriver
-- Python
-- Pytest
-- Page Object Model (POM)
-- Evidências de execução
+- Estrutura baseada em Page Object Model (POM)
+- Automação de cenários funcionais, negativos e de segurança
+- Controle de sessão e autenticação
+- Organização de dados de teste em módulos reutilizáveis
+- Integração com Git e GitHub
+- Execução automatizada de suíte de testes com Pytest
 
 ## Aplicação Testada
 
