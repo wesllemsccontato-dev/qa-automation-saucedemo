@@ -20,9 +20,9 @@ https://www.saucedemo.com/
 ## Cenários Automatizados
 
 Autenticação
-✅ CT-001 — Login válido
-✅ CT-002 — Login inválido
-✅ CT-003 — Usuário inválido
+-✅ CT-001 — Login válido
+-✅ CT-002 — Login inválido
+-✅ CT-003 — Usuário inválido
 ✅ CT-013 — Campos obrigatórios vazios
 ✅ CT-018 — Sensibilidade da senha
 ✅ CT-056 — Login pressionando ENTER
