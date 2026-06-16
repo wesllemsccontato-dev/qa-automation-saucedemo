@@ -21,7 +21,6 @@ https://www.saucedemo.com/
 
 Autenticação
 ✅ CT-001 — Login válido
-
 ✅ CT-002 — Login inválido
 ✅ CT-003 — Usuário inválido
 ✅ CT-013 — Campos obrigatórios vazios
