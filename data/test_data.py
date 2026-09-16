@@ -5,11 +5,15 @@
 
 USERNAME = "standard_user"
 
+
+
 PASSWORD = "secret_sauce"
 
 INVALID_USERNAME = "usuario_invalido"
 
 INVALID_PASSWORD = "senha_invalida"
+
+NONEX_USER ="Non-existent_user" 
 
 PAYLOADS1 = "<script>alert('XSS')</script>"
 

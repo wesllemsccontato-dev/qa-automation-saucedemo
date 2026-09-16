@@ -27,7 +27,7 @@ def test_CT053_scripts_maliciosos(driver):
 
     page.open()
     
-    page.login_XSS(
+    page.login(
         PAYLOADS1,
         PAY_PASSWORD
     )
