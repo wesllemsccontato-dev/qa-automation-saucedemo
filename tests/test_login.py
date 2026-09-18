@@ -497,7 +497,7 @@ def test_CT076_tempo_resposta(driver):
         PASSWORD
     )
     inicio = time.perf_counter()
-    page.wait_for_inventory
+    page.wait_for_inventory()
     
     fim = time.perf_counter()
     
@@ -515,7 +515,8 @@ def test_CT077_multiplas_tentativas(driver):
     cronometro = Cronometro()
     page = LoginPage(driver)
     page.open()
-    totaltempo = 0
+    tempos = []
+    
     for tentativas in range(10):
         
         cronometro.iniciar()
@@ -524,22 +525,50 @@ def test_CT077_multiplas_tentativas(driver):
             INVALID_PASSWORD
         )
         
-        page.wait_messege_error()
+        messagem = page.get_error_message()
     
         
         tempo = cronometro.parar()   
         
+        tempos.append(tempo)
         print("Tempo: ",tempo)
         
         assert (
-        page.get_error_message()
+        messagem
         == "Epic sadface: Username and password do not match any user in this service"
         )
-        assert tempo <=3
         
-        totaltempo = totaltempo + tempo
+        
+        
         
         page.apagar()
         
-    totaltempo = totaltempo/10
-    assert totaltempo<=3
+    print("Tempos: ", tempos)
+    
+    media = sum(tempos) / len(tempos)
+    
+    assert media <= 3
+    assert all(tempo <= 3 for tempo in tempos)
+
+# CT-083 - Refresh durante o login
+def test_CT083_refresh_durante_login(driver): 
+
+
+    page = LoginPage(driver)
+
+    page.open()
+
+    page.login(
+        USERNAME,
+        PASSWORD
+    )
+    
+    driver.refresh()
+    
+    page.login(
+        USERNAME,
+        PASSWORD
+    )
+    page.wait_for_inventory()
+    
+    assert driver.current_url == page.URL_INV

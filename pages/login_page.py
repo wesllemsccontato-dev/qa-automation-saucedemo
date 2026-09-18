@@ -35,6 +35,11 @@ class LoginPage:
     
     def wait_for_inventory(self):
         WebDriverWait(self.driver, 10).until(
+        EC.url_contains(self.URL)
+    )
+        
+    def wait_for_login_page(self):
+        WebDriverWait(self.driver, 10).until(
         EC.url_contains("/inventory.html")
     )
 
